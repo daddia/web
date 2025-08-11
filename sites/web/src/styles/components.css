@@ -1,0 +1,19 @@
+@import 'tailwindcss' source(none);
+
+/* Explicitly register UI component sources for TailwindCSS v4 tree-shaking */
+@source "../../../../packages/ui/src/button.tsx";
+@source "../../../../packages/ui/src/utils.ts";
+
+@layer components {
+  /* App-specific animation styles */
+  .animate-in {
+    animation-duration: 150ms;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+  }
+  .animate-out {
+    animation-duration: 150ms;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+  } 
+}

@@ -1,0 +1,150 @@
+@import 'tailwindcss';
+@import '@repo/lumitut-tokens/css/tokens.css';
+
+@theme {
+  /* Purple (Primary brand color) */
+  --color-purple-50: var(--l-color-purple-1);
+  --color-purple-100: var(--l-color-purple-2);
+  --color-purple-150: var(--l-color-purple-3);
+  --color-purple-200: var(--l-color-purple-4);
+  --color-purple-250: var(--l-color-purple-5);
+  --color-purple-300: var(--l-color-purple-6);
+  --color-purple-350: var(--l-color-purple-7);
+  --color-purple-400: var(--l-color-purple-8);
+  --color-purple-450: var(--l-color-purple-9);
+  --color-purple-500: var(--l-color-purple-10);
+  --color-purple-550: var(--l-color-purple-11);
+  --color-purple-600: var(--l-color-purple-12);
+  --color-purple-700: var(--l-color-purple-13);
+  --color-purple-800: var(--l-color-purple-14);
+  --color-purple-900: var(--l-color-purple-15);
+  --color-purple-950: var(--l-color-purple-16);
+
+  /* Lavender (Secondary brand color) */
+  --color-lavender-50: var(--l-color-lavender-1);
+  --color-lavender-100: var(--l-color-lavender-2);
+  --color-lavender-150: var(--l-color-lavender-3);
+  --color-lavender-200: var(--l-color-lavender-4);
+  --color-lavender-250: var(--l-color-lavender-5);
+  --color-lavender-300: var(--l-color-lavender-6);
+  --color-lavender-350: var(--l-color-lavender-7);
+  --color-lavender-400: var(--l-color-lavender-8);
+  --color-lavender-450: var(--l-color-lavender-9);
+  --color-lavender-500: var(--l-color-lavender-10);
+  --color-lavender-550: var(--l-color-lavender-11);
+  --color-lavender-600: var(--l-color-lavender-12);
+  --color-lavender-700: var(--l-color-lavender-13);
+  --color-lavender-800: var(--l-color-lavender-14);
+  --color-lavender-900: var(--l-color-lavender-15);
+  --color-lavender-950: var(--l-color-lavender-16);
+
+  /* Sunbeam (Accent color) */
+  --color-sunbeam-50: var(--l-color-sunbeam-1);
+  --color-sunbeam-100: var(--l-color-sunbeam-2);
+  --color-sunbeam-150: var(--l-color-sunbeam-3);
+  --color-sunbeam-200: var(--l-color-sunbeam-4);
+  --color-sunbeam-250: var(--l-color-sunbeam-5);
+  --color-sunbeam-300: var(--l-color-sunbeam-6);
+  --color-sunbeam-350: var(--l-color-sunbeam-7);
+  --color-sunbeam-400: var(--l-color-sunbeam-8);
+  --color-sunbeam-450: var(--l-color-sunbeam-9);
+  --color-sunbeam-500: var(--l-color-sunbeam-10);
+  --color-sunbeam-550: var(--l-color-sunbeam-11);
+  --color-sunbeam-600: var(--l-color-sunbeam-12);
+  --color-sunbeam-700: var(--l-color-sunbeam-13);
+  --color-sunbeam-800: var(--l-color-sunbeam-14);
+  --color-sunbeam-900: var(--l-color-sunbeam-15);
+  --color-sunbeam-950: var(--l-color-sunbeam-16);
+
+  /* Gray (Neutral scale) */
+  --color-gray-50: var(--l-color-gray-1);
+  --color-gray-100: var(--l-color-gray-2);
+  --color-gray-150: var(--l-color-gray-3);
+  --color-gray-200: var(--l-color-gray-4);
+  --color-gray-250: var(--l-color-gray-5);
+  --color-gray-300: var(--l-color-gray-6);
+  --color-gray-350: var(--l-color-gray-7);
+  --color-gray-400: var(--l-color-gray-8);
+  --color-gray-450: var(--l-color-gray-9);
+  --color-gray-500: var(--l-color-gray-10);
+  --color-gray-550: var(--l-color-gray-11);
+  --color-gray-600: var(--l-color-gray-12);
+  --color-gray-700: var(--l-color-gray-13);
+  --color-gray-800: var(--l-color-gray-14);
+  --color-gray-900: var(--l-color-gray-15);
+  --color-gray-950: var(--l-color-gray-16);
+
+  /* Static colors */
+  --color-white: var(--l-color-cloud);
+  --color-black: var(--l-color-ink);
+  --color-cloud: var(--l-color-cloud);
+  --color-ink: var(--l-color-ink);
+
+  /* Semantic colors */
+  --color-success: var(--l-color-bg-success);
+  --color-warning: var(--l-color-bg-warning);
+  --color-error: var(--l-color-bg-error);
+  --color-info: var(--l-color-bg-info);
+  --color-engagement: var(--l-color-engagement);
+
+  /* Default semantic mappings */
+  --color-background: var(--l-color-bg-surface);
+  --color-foreground: var(--l-color-text);
+  --color-muted: var(--l-color-bg-surface-subtle);
+  --color-muted-foreground: var(--l-color-text-secondary);
+  --color-primary: var(--l-color-bg-primary);
+  --color-primary-foreground: var(--l-color-text-inverse);
+  --color-secondary: var(--l-color-bg-secondary);
+  --color-secondary-foreground: var(--l-color-text-inverse);
+  --color-accent: var(--l-color-bg-accent);
+  --color-accent-foreground: var(--l-color-text);
+  --color-border: var(--l-color-border);
+  --color-input: var(--l-color-input-border);
+  --color-ring: var(--l-color-border-focus);
+
+  /* Typography - Font Families */
+  --font-family-sans: var(--l-font-family-body);
+  --font-family-heading: var(--l-font-family-heading);
+  --font-family-mono: 'Courier New', monospace;
+  /* Typography - Font Sizes */
+  --font-size-xs: var(--l-size-xs);
+  --font-size-sm: var(--l-size-sm);
+  --font-size-base: var(--l-size-base);
+  --font-size-lg: var(--l-size-lg);
+  --font-size-xl: var(--l-size-xl);
+  --font-size-2xl: var(--l-size-2xl);
+  --font-size-3xl: var(--l-size-3xl);
+  --font-size-4xl: var(--l-size-4xl);
+  --font-size-5xl: 3.5rem;
+  --font-size-6xl: 4rem;
+  --font-size-7xl: 5rem;
+  --font-size-8xl: 6rem;
+  --font-size-9xl: 8rem;
+
+  /* Typography - Font Weights */
+  --font-weight-thin: 100;
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
+  --font-weight-normal: var(--l-font-weight-regular);
+  --font-weight-medium: var(--l-font-weight-medium);
+  --font-weight-semibold: var(--l-font-weight-semibold);
+  --font-weight-bold: var(--l-font-weight-bold);
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+
+  /* Typography - Line Heights */
+  --line-height-none: 1;
+  --line-height-tight: var(--l-line-height-tight);
+  --line-height-snug: var(--l-line-height-snug);
+  --line-height-normal: var(--l-line-height-normal);
+  --line-height-relaxed: var(--l-line-height-relaxed);
+  --line-height-loose: var(--l-line-height-loose);
+
+  /* Typography - Letter Spacing */
+  --letter-spacing-tighter: -0.05em;
+  --letter-spacing-tight: var(--l-letter-spacing-tight);
+  --letter-spacing-normal: var(--l-letter-spacing-normal);
+  --letter-spacing-wide: var(--l-letter-spacing-wide);
+  --letter-spacing-wider: 0.05em;
+  --letter-spacing-widest: 0.1em;
+}

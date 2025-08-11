@@ -1,0 +1,9 @@
+# build
+dist
+build
+
+# testing
+tests
+
+# typescript
+*.tsbuildinfo
