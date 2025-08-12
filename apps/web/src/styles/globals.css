@@ -2,4 +2,6 @@
 @import './components.css';
 
 @theme {
+    --font-poppins: var(--font-poppins);
+    --font-lora: var(--font-lora);
 }

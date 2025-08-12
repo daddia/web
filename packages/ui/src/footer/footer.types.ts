@@ -1,4 +1,4 @@
-import { type ComponentPropsWithoutRef, type ReactNode } from 'react';
+import { type ComponentPropsWithoutRef, type ReactNode, type SVGProps, type JSX } from 'react';
 import { type VariantProps } from 'class-variance-authority';
 import { type footerVariants } from './footer.styles';
 
@@ -16,7 +16,7 @@ export interface FooterLinkSection {
 export interface FooterSocialLink {
   name: string;
   href: string;
-  icon: (props: any) => JSX.Element;
+  icon: (props: SVGProps<SVGSVGElement>) => JSX.Element;
 }
 
 // Company information

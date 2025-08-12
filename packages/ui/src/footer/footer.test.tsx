@@ -1,9 +1,13 @@
+import * as React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import { Footer, FooterSection, FooterLinks, FooterSocial, FooterNewsletterForm } from './footer';
 import type { FooterProps } from './footer.types';
 
 // Mock social icon component
-const MockIcon = (props: any) => <svg {...props} data-testid="mock-icon" />;
+const MockIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg {...props} data-testid="mock-icon" />
+);
 
 describe('Footer', () => {
   const defaultProps: FooterProps = {

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Footer, FooterSection, FooterLinks, FooterSocial, FooterNewsletterForm } from './footer';
-import type { FooterProps, FooterSocialLink } from './footer.types';
+import type { FooterSocialLink } from './footer.types';
 
 const meta: Meta<typeof Footer> = {
   title: 'Components/Footer',
@@ -208,7 +208,7 @@ export const WithNewsletter: Story = {
       description: 'The latest news, articles, and resources, sent to your inbox weekly.',
       placeholder: 'Enter your email',
       buttonText: 'Subscribe',
-      onSubmit: (email) => console.log('Newsletter subscription:', email),
+      onSubmit: (email: string) => console.log('Newsletter subscription:', email),
     },
   },
 };

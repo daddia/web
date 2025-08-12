@@ -180,7 +180,7 @@ const ColumnsLayout: React.FC<FooterProps> = ({ company, navigation, newsletter,
                     src={company.logo}
                     className="h-9 dark:hidden"
                   />
-                  {company.logoDark && (
+                  {company.logoDark && typeof company.logoDark === 'string' && (
                     <img
                       alt={company.name || 'Company logo'}
                       src={company.logoDark}
@@ -219,7 +219,7 @@ const ColumnsLayout: React.FC<FooterProps> = ({ company, navigation, newsletter,
         </div>
 
         {/* Newsletter section (if in sidebar) */}
-        {hasNewsletter && !company?.description && (
+        {hasNewsletter && !company?.description && newsletter && (
           <div className="mt-10 xl:mt-0">
             <h3 className={footerHeadingVariants()}>
               {newsletter.title || 'Subscribe to our newsletter'}
@@ -238,7 +238,7 @@ const ColumnsLayout: React.FC<FooterProps> = ({ company, navigation, newsletter,
       </div>
 
       {/* Newsletter below (if not in sidebar) */}
-      {hasNewsletter && company?.description && (
+      {hasNewsletter && company?.description && newsletter && (
         <div className={footerDividerVariants()}>
           <div className="lg:flex lg:items-center lg:justify-between">
             <div>
@@ -330,7 +330,7 @@ const MissionLayout: React.FC<FooterProps> = ({ company, navigation, size }) => 
                     src={company.logo}
                     className="h-9 dark:hidden"
                   />
-                  {company.logoDark && (
+                  {company.logoDark && typeof company.logoDark === 'string' && (
                     <img
                       alt={company.name || 'Company logo'}
                       src={company.logoDark}

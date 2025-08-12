@@ -1,24 +1,17 @@
-import { Nunito, Lexend_Deca, Courgette } from 'next/font/google';
+import { Poppins, Lora } from 'next/font/google';
 
-export const nunito = Nunito({
-  weight: ['400', '500', '600', '700', '800', '900'], // Regular, Medium, Semibold, Bold, ExtraBold, Black
+export const poppins = Poppins({
+  weight: ['600'],
   subsets: ['latin'],
-  variable: '--font-nunito',
+  variable: '--font-poppins',
   display: 'swap',
 });
 
-export const lexendDeca = Lexend_Deca({
-  weight: ['400', '500', '600', '700', '800', '900'], // Regular, Medium, Semibold, Bold, ExtraBold, Black
+export const lora = Lora({
+  weight: ['400', '500', '600', '700'], // Regular, Medium, Semibold, Bold
   subsets: ['latin'],
-  variable: '--font-lexend-deca',
+  variable: '--font-lora',
   display: 'swap',
 });
 
-export const courgette = Courgette({
-  weight: '400', // Courgette only has regular weight
-  subsets: ['latin'],
-  variable: '--font-courgette',
-  display: 'swap',
-});
-
-export const fontClassNames = `${nunito.variable} ${lexendDeca.variable} ${courgette.variable}`;
+export const fontClassNames = `${poppins.variable} ${lora.variable}`;

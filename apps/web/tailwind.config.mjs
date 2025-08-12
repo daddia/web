@@ -11,8 +11,8 @@ const config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-lexend-deca)', 'system-ui', 'sans-serif'],
-        heading: ['var(--font-nunito)', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-lora)', 'system-ui', 'sans-serif'],
+        heading: ['var(--font-poppins)', 'system-ui', 'sans-serif'],
       },
     },
   },
