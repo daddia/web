@@ -1,10 +1,4 @@
-export {
-  Footer,
-  FooterSection,
-  FooterLinks,
-  FooterSocial,
-  FooterNewsletterForm,
-} from './footer'
+export { Footer, FooterSection, FooterLinks, FooterSocial, FooterNewsletterForm } from './footer';
 
 export type {
   FooterProps,
@@ -19,7 +13,7 @@ export type {
   FooterLinksProps,
   FooterSocialProps,
   FooterNewsletterFormProps,
-} from './footer.types'
+} from './footer.types';
 
 export {
   footerVariants,
@@ -30,4 +24,4 @@ export {
   footerButtonVariants,
   footerInputVariants,
   footerDividerVariants,
-} from './footer.styles'
+} from './footer.styles';

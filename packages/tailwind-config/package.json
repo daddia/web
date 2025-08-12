@@ -12,9 +12,6 @@
     "./dist": "./dist/globals.css",
     "./postcss": "./postcss.config.mjs"
   },
-  "dependencies": {
-    "@repo/lumitut-tokens": "workspace:*"
-  },
   "devDependencies": {
     "@types/node": "^20",
     "postcss": "^8.5.6",

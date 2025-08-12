@@ -22,7 +22,7 @@ pnpm install @daddia/ui
 ### Basic Example
 
 ```tsx
-import { Footer } from '@repo/ui/footer'
+import { Footer } from '@repo/ui/footer';
 
 const navigation = {
   sections: [
@@ -45,7 +45,7 @@ const navigation = {
     { name: 'GitHub', href: 'https://github.com', icon: GitHubIcon },
     { name: 'Twitter', href: 'https://twitter.com', icon: TwitterIcon },
   ],
-}
+};
 
 function MyFooter() {
   return (
@@ -60,13 +60,14 @@ function MyFooter() {
       }}
       navigation={navigation}
     />
-  )
+  );
 }
 ```
 
 ### Layout Variants
 
 #### Simple Layout
+
 Minimal footer with just copyright and social links.
 
 ```tsx
@@ -78,6 +79,7 @@ Minimal footer with just copyright and social links.
 ```
 
 #### Centered Layout
+
 Navigation links centered with social icons below.
 
 ```tsx
@@ -94,17 +96,15 @@ Navigation links centered with social icons below.
 ```
 
 #### Columns Layout
+
 Traditional multi-column footer with navigation sections.
 
 ```tsx
-<Footer
-  layout="columns"
-  company={companyInfo}
-  navigation={{ sections: navigationSections }}
-/>
+<Footer layout="columns" company={companyInfo} navigation={{ sections: navigationSections }} />
 ```
 
 #### Newsletter Layout
+
 Footer with integrated newsletter signup form.
 
 ```tsx
@@ -119,6 +119,7 @@ Footer with integrated newsletter signup form.
 ```
 
 #### CTA Layout
+
 Footer with prominent call-to-action section.
 
 ```tsx
@@ -134,6 +135,7 @@ Footer with prominent call-to-action section.
 ```
 
 #### Mission Layout
+
 Footer with company mission statement and social links.
 
 ```tsx
@@ -151,13 +153,13 @@ Footer with company mission statement and social links.
 You can compose your own footer layout using the provided sub-components:
 
 ```tsx
-import { 
-  Footer, 
-  FooterSection, 
-  FooterLinks, 
-  FooterSocial, 
-  FooterNewsletterForm 
-} from '@daddia/ui/footer'
+import {
+  Footer,
+  FooterSection,
+  FooterLinks,
+  FooterSocial,
+  FooterNewsletterForm,
+} from '@daddia/ui/footer';
 
 function CustomFooter() {
   return (
@@ -166,22 +168,20 @@ function CustomFooter() {
         <FooterSection title="Custom Section">
           <p>Custom content here</p>
         </FooterSection>
-        
+
         <FooterLinks
           links={[
             { name: 'Link 1', href: '#' },
             { name: 'Link 2', href: '#' },
           ]}
         />
-        
+
         <FooterSocial links={socialLinks} />
-        
-        <FooterNewsletterForm
-          onSubmit={(email) => handleSubscribe(email)}
-        />
+
+        <FooterNewsletterForm onSubmit={(email) => handleSubscribe(email)} />
       </div>
     </Footer>
-  )
+  );
 }
 ```
 
@@ -189,49 +189,49 @@ function CustomFooter() {
 
 ### Footer Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `layout` | `'simple' \| 'centered' \| 'columns' \| 'newsletter' \| 'cta' \| 'mission'` | `'columns'` | Footer layout variant |
-| `variant` | `'default' \| 'light' \| 'dark' \| 'transparent'` | `'default'` | Visual style variant |
-| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | Size variant |
-| `company` | `FooterCompanyInfo` | - | Company information |
-| `navigation` | `FooterNavigation` | - | Navigation structure |
-| `newsletter` | `FooterNewsletter` | - | Newsletter configuration |
-| `cta` | `FooterCTA` | - | Call-to-action configuration |
-| `children` | `ReactNode` | - | Custom content (overrides layout) |
+| Prop         | Type                                                                        | Default     | Description                       |
+| ------------ | --------------------------------------------------------------------------- | ----------- | --------------------------------- |
+| `layout`     | `'simple' \| 'centered' \| 'columns' \| 'newsletter' \| 'cta' \| 'mission'` | `'columns'` | Footer layout variant             |
+| `variant`    | `'default' \| 'light' \| 'dark' \| 'transparent'`                           | `'default'` | Visual style variant              |
+| `size`       | `'sm' \| 'md' \| 'lg'`                                                      | `'md'`      | Size variant                      |
+| `company`    | `FooterCompanyInfo`                                                         | -           | Company information               |
+| `navigation` | `FooterNavigation`                                                          | -           | Navigation structure              |
+| `newsletter` | `FooterNewsletter`                                                          | -           | Newsletter configuration          |
+| `cta`        | `FooterCTA`                                                                 | -           | Call-to-action configuration      |
+| `children`   | `ReactNode`                                                                 | -           | Custom content (overrides layout) |
 
 ### Type Definitions
 
 ```typescript
 interface FooterCompanyInfo {
-  name?: string
-  logo?: ReactNode | string
-  logoDark?: ReactNode | string
-  description?: string
-  copyright?: string
+  name?: string;
+  logo?: ReactNode | string;
+  logoDark?: ReactNode | string;
+  description?: string;
+  copyright?: string;
 }
 
 interface FooterNavigation {
-  sections?: FooterLinkSection[]
-  social?: FooterSocialLink[]
-  main?: FooterLink[]
+  sections?: FooterLinkSection[];
+  social?: FooterSocialLink[];
+  main?: FooterLink[];
 }
 
 interface FooterNewsletter {
-  title?: string
-  description?: string
-  placeholder?: string
-  buttonText?: string
-  onSubmit?: (email: string) => void | Promise<void>
+  title?: string;
+  description?: string;
+  placeholder?: string;
+  buttonText?: string;
+  onSubmit?: (email: string) => void | Promise<void>;
 }
 
 interface FooterCTA {
-  title?: string
-  subtitle?: string
-  description?: string
-  buttonText?: string
-  buttonHref?: string
-  onClick?: () => void
+  title?: string;
+  subtitle?: string;
+  description?: string;
+  buttonText?: string;
+  buttonHref?: string;
+  onClick?: () => void;
 }
 ```
 
@@ -255,6 +255,7 @@ The component uses Tailwind CSS classes and supports dark mode out of the box. Y
 ## Testing
 
 The component includes comprehensive tests covering:
+
 - All layout variants
 - Style variants
 - User interactions
@@ -262,6 +263,7 @@ The component includes comprehensive tests covering:
 - Custom composition
 
 Run tests with:
+
 ```bash
 pnpm test footer
 ```

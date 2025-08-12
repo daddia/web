@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import { Footer, FooterSection, FooterLinks, FooterSocial, FooterNewsletterForm } from './footer'
-import type { FooterProps, FooterSocialLink } from './footer.types'
+import type { Meta, StoryObj } from '@storybook/react';
+import { Footer, FooterSection, FooterLinks, FooterSocial, FooterNewsletterForm } from './footer';
+import type { FooterProps, FooterSocialLink } from './footer.types';
 
 const meta: Meta<typeof Footer> = {
   title: 'Components/Footer',
@@ -22,10 +22,10 @@ const meta: Meta<typeof Footer> = {
       options: ['sm', 'md', 'lg'],
     },
   },
-}
+};
 
-export default meta
-type Story = StoryObj<typeof Footer>
+export default meta;
+type Story = StoryObj<typeof Footer>;
 
 // Sample data
 const socialLinks: FooterSocialLink[] = [
@@ -90,7 +90,7 @@ const socialLinks: FooterSocialLink[] = [
       </svg>
     ),
   },
-]
+];
 
 const navigationSections = [
   {
@@ -128,7 +128,7 @@ const navigationSections = [
       { name: 'License', href: '#' },
     ],
   },
-]
+];
 
 const companyInfo = {
   name: 'Your Company',
@@ -136,7 +136,7 @@ const companyInfo = {
   logoDark: 'https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500',
   description: 'Making the world a better place through constructing elegant hierarchies.',
   copyright: '© 2024 Your Company, Inc. All rights reserved.',
-}
+};
 
 // Stories
 export const Simple: Story = {
@@ -151,7 +151,7 @@ export const Simple: Story = {
       social: socialLinks,
     },
   },
-}
+};
 
 export const Centered: Story = {
   args: {
@@ -173,7 +173,7 @@ export const Centered: Story = {
       social: socialLinks,
     },
   },
-}
+};
 
 export const FourColumn: Story = {
   args: {
@@ -186,7 +186,7 @@ export const FourColumn: Story = {
       social: socialLinks,
     },
   },
-}
+};
 
 export const WithNewsletter: Story = {
   args: {
@@ -211,7 +211,7 @@ export const WithNewsletter: Story = {
       onSubmit: (email) => console.log('Newsletter subscription:', email),
     },
   },
-}
+};
 
 export const WithCTA: Story = {
   args: {
@@ -226,12 +226,13 @@ export const WithCTA: Story = {
     cta: {
       subtitle: 'Get started',
       title: 'Boost your productivity. Start using our app today.',
-      description: 'Incididunt sint fugiat pariatur cupidatat consectetur sit cillum anim id veniam aliqua proident excepteur commodo do ea.',
+      description:
+        'Incididunt sint fugiat pariatur cupidatat consectetur sit cillum anim id veniam aliqua proident excepteur commodo do ea.',
       buttonText: 'Get started',
       buttonHref: '#',
     },
   },
-}
+};
 
 export const Mission: Story = {
   args: {
@@ -244,7 +245,7 @@ export const Mission: Story = {
       social: socialLinks,
     },
   },
-}
+};
 
 export const Dark: Story = {
   args: {
@@ -257,7 +258,7 @@ export const Dark: Story = {
       social: socialLinks,
     },
   },
-}
+};
 
 export const Light: Story = {
   args: {
@@ -270,7 +271,7 @@ export const Light: Story = {
       social: socialLinks,
     },
   },
-}
+};
 
 export const Small: Story = {
   args: {
@@ -283,7 +284,7 @@ export const Small: Story = {
       social: socialLinks,
     },
   },
-}
+};
 
 export const Large: Story = {
   args: {
@@ -296,7 +297,7 @@ export const Large: Story = {
       social: socialLinks,
     },
   },
-}
+};
 
 // Custom composition example
 export const CustomComposition: Story = {
@@ -342,4 +343,4 @@ export const CustomComposition: Story = {
       </div>
     </Footer>
   ),
-}
+};

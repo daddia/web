@@ -1,6 +1,6 @@
 # daddia.com
 
-This folder contains the source code of the [daddia.com](https://daddia.com) website. 
+This folder contains the source code of the [daddia.com](https://daddia.com) website.
 
 ### Install and Build
 

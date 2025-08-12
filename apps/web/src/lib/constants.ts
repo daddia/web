@@ -6,9 +6,7 @@ export const BASE_URL =
   process.env.NODE_ENV === 'production' ? 'https://daddia.com' : 'http://localhost:3000';
 
 // SEO Keywords
-export const DEFAULT_KEYWORDS = [
-  'daddia',
-];
+export const DEFAULT_KEYWORDS = ['daddia'];
 
 // Social defaults
 export const DEFAULT_SOCIAL_IMAGE = '/default-og.jpg';
@@ -33,8 +31,7 @@ export const ORG_LOGO_HEIGHT = 600;
 // Article schema defaults
 export const DEFAULT_ARTICLE_SECTION = 'Blog';
 export const DEFAULT_ARTICLE_WORD_COUNT = 2000;
-export const DEFAULT_ARTICLE_KEYWORDS =
-  'daddia';
+export const DEFAULT_ARTICLE_KEYWORDS = 'daddia';
 export const DEFAULT_ARTICLE_IMAGE = '/images/hero_image.jpg';
 export const DEFAULT_AUTHOR_NAME = 'daddia';
 export const DEFAULT_AUTHOR_URL_PATH = '';
