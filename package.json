@@ -1,5 +1,5 @@
 {
-  "name": "lumitut-monorepo",
+  "name": "daddia-monorepo",
   "version": "0.0.0",
   "private": true,
   "packageManager": "pnpm@10.14.0",
@@ -9,6 +9,7 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
+    "site:clean": "turbo run clean --filter=website",
     "site:dev": "turbo run dev --filter=website",
     "site:build": "turbo run build --filter=website",
     "lint": "turbo run lint",
