@@ -2,58 +2,125 @@
 
 import { clsx } from 'clsx';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 export function Logo({ className }: { className?: string }) {
-  const transition = {
-    duration: 0.4,
-    ease: 'easeInOut' as const,
-  };
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <motion.svg
-      variants={{ idle: {}, active: {} }}
-      initial="idle"
-      whileHover="active"
       viewBox="0 0 592.5 172.499995"
-      className={clsx(className, 'overflow-visible')}
+      className={clsx(className, 'overflow-visible cursor-pointer')}
+      onHoverStart={() => setIsHovered(true)}
+      onHoverEnd={() => setIsHovered(false)}
     >
-      {/* First part - "dadd" */}
+      {/* First letter d */}
       <motion.g
-        variants={{
-          idle: { scale: 1, opacity: 1 },
-          active: {
-            scale: [1, 1.05, 1],
-            opacity: [1, 0.9, 1],
-            transition: {
-              ...transition,
-              delay: 0,
-            },
-          },
+        animate={
+          isHovered
+            ? {
+                scale: [1, 1.05, 1],
+                opacity: [1, 0.9, 1],
+              }
+            : {
+                scale: 1,
+                opacity: 1,
+              }
+        }
+        transition={{
+          duration: 0.4,
+          ease: 'easeInOut',
+          delay: isHovered ? 0 : 0,
         }}
       >
         <g className="fill-slate-700 dark:fill-slate-100">
-          {/* Letter d */}
           <g transform="translate(10.831215, 135.357649)">
             <path
               style={{ stroke: 'none' }}
               d="M 4.015625 -40.203125 C 4.015625 -48.429688 5.570312 -55.65625 8.6875 -61.875 C 11.800781 -68.101562 16.035156 -72.890625 21.390625 -76.234375 C 26.753906 -79.585938 32.738281 -81.265625 39.34375 -81.265625 C 44.601562 -81.265625 49.410156 -80.160156 53.765625 -77.953125 C 58.117188 -75.753906 61.539062 -72.789062 64.03125 -69.0625 L 64.03125 -106.25 L 88.59375 -106.25 L 88.59375 0 L 64.03125 0 L 64.03125 -11.484375 C 61.738281 -7.660156 58.460938 -4.597656 54.203125 -2.296875 C 49.941406 0.00390625 44.988281 1.15625 39.34375 1.15625 C 32.738281 1.15625 26.753906 -0.539062 21.390625 -3.9375 C 16.035156 -7.34375 11.800781 -12.179688 8.6875 -18.453125 C 5.570312 -24.722656 4.015625 -31.972656 4.015625 -40.203125 Z M 64.03125 -40.0625 C 64.03125 -46.1875 62.332031 -51.019531 58.9375 -54.5625 C 55.539062 -58.101562 51.398438 -59.875 46.515625 -59.875 C 41.640625 -59.875 37.5 -58.125 34.09375 -54.625 C 30.695312 -51.132812 29 -46.328125 29 -40.203125 C 29 -34.078125 30.695312 -29.21875 34.09375 -25.625 C 37.5 -22.039062 41.640625 -20.25 46.515625 -20.25 C 51.398438 -20.25 55.539062 -22.019531 58.9375 -25.5625 C 62.332031 -29.101562 64.03125 -33.9375 64.03125 -40.0625 Z M 64.03125 -40.0625"
             />
           </g>
-          {/* Letter a */}
+        </g>
+      </motion.g>
+
+      {/* First letter a */}
+      <motion.g
+        animate={
+          isHovered
+            ? {
+                scale: [1, 1.05, 1],
+                opacity: [1, 0.9, 1],
+              }
+            : {
+                scale: 1,
+                opacity: 1,
+              }
+        }
+        transition={{
+          duration: 0.4,
+          ease: 'easeInOut',
+          delay: isHovered ? 0.05 : 0,
+        }}
+      >
+        <g className="fill-slate-700 dark:fill-slate-100">
           <g transform="translate(108.32457, 135.357649)">
             <path
               style={{ stroke: 'none' }}
               d="M 4.015625 -40.203125 C 4.015625 -48.429688 5.570312 -55.65625 8.6875 -61.875 C 11.800781 -68.101562 16.035156 -72.890625 21.390625 -76.234375 C 26.753906 -79.585938 32.738281 -81.265625 39.34375 -81.265625 C 44.988281 -81.265625 49.941406 -80.113281 54.203125 -77.8125 C 58.460938 -75.519531 61.738281 -72.507812 64.03125 -68.78125 L 64.03125 -80.109375 L 88.59375 -80.109375 L 88.59375 0 L 64.03125 0 L 64.03125 -11.34375 C 61.644531 -7.613281 58.320312 -4.597656 54.0625 -2.296875 C 49.800781 0.00390625 44.847656 1.15625 39.203125 1.15625 C 32.691406 1.15625 26.753906 -0.539062 21.390625 -3.9375 C 16.035156 -7.34375 11.800781 -12.179688 8.6875 -18.453125 C 5.570312 -24.722656 4.015625 -31.972656 4.015625 -40.203125 Z M 64.03125 -40.0625 C 64.03125 -46.1875 62.332031 -51.019531 58.9375 -54.5625 C 55.539062 -58.101562 51.398438 -59.875 46.515625 -59.875 C 41.640625 -59.875 37.5 -58.125 34.09375 -54.625 C 30.695312 -51.132812 29 -46.328125 29 -40.203125 C 29 -34.078125 30.695312 -29.21875 34.09375 -25.625 C 37.5 -22.039062 41.640625 -20.25 46.515625 -20.25 C 51.398438 -20.25 55.539062 -22.019531 58.9375 -25.5625 C 62.332031 -29.101562 64.03125 -33.9375 64.03125 -40.0625 Z M 64.03125 -40.0625"
             />
           </g>
-          {/* Letter d */}
+        </g>
+      </motion.g>
+
+      {/* Second letter d */}
+      <motion.g
+        animate={
+          isHovered
+            ? {
+                scale: [1, 1.05, 1],
+                opacity: [1, 0.9, 1],
+              }
+            : {
+                scale: 1,
+                opacity: 1,
+              }
+        }
+        transition={{
+          duration: 0.4,
+          ease: 'easeInOut',
+          delay: isHovered ? 0.1 : 0,
+        }}
+      >
+        <g className="fill-slate-700 dark:fill-slate-100">
           <g transform="translate(205.817925, 135.357649)">
             <path
               style={{ stroke: 'none' }}
               d="M 4.015625 -40.203125 C 4.015625 -48.429688 5.570312 -55.65625 8.6875 -61.875 C 11.800781 -68.101562 16.035156 -72.890625 21.390625 -76.234375 C 26.753906 -79.585938 32.738281 -81.265625 39.34375 -81.265625 C 44.601562 -81.265625 49.410156 -80.160156 53.765625 -77.953125 C 58.117188 -75.753906 61.539062 -72.789062 64.03125 -69.0625 L 64.03125 -106.25 L 88.59375 -106.25 L 88.59375 0 L 64.03125 0 L 64.03125 -11.484375 C 61.738281 -7.660156 58.460938 -4.597656 54.203125 -2.296875 C 49.941406 0.00390625 44.988281 1.15625 39.34375 1.15625 C 32.738281 1.15625 26.753906 -0.539062 21.390625 -3.9375 C 16.035156 -7.34375 11.800781 -12.179688 8.6875 -18.453125 C 5.570312 -24.722656 4.015625 -31.972656 4.015625 -40.203125 Z M 64.03125 -40.0625 C 64.03125 -46.1875 62.332031 -51.019531 58.9375 -54.5625 C 55.539062 -58.101562 51.398438 -59.875 46.515625 -59.875 C 41.640625 -59.875 37.5 -58.125 34.09375 -54.625 C 30.695312 -51.132812 29 -46.328125 29 -40.203125 C 29 -34.078125 30.695312 -29.21875 34.09375 -25.625 C 37.5 -22.039062 41.640625 -20.25 46.515625 -20.25 C 51.398438 -20.25 55.539062 -22.019531 58.9375 -25.5625 C 62.332031 -29.101562 64.03125 -33.9375 64.03125 -40.0625 Z M 64.03125 -40.0625"
             />
           </g>
-          {/* Letter d */}
+        </g>
+      </motion.g>
+
+      {/* Third letter d */}
+      <motion.g
+        animate={
+          isHovered
+            ? {
+                scale: [1, 1.05, 1],
+                opacity: [1, 0.9, 1],
+              }
+            : {
+                scale: 1,
+                opacity: 1,
+              }
+        }
+        transition={{
+          duration: 0.4,
+          ease: 'easeInOut',
+          delay: isHovered ? 0.15 : 0,
+        }}
+      >
+        <g className="fill-slate-700 dark:fill-slate-100">
           <g transform="translate(303.311291, 135.357649)">
             <path
               style={{ stroke: 'none' }}
@@ -63,22 +130,26 @@ export function Logo({ className }: { className?: string }) {
         </g>
       </motion.g>
 
-      {/* Second part - "i" with special color */}
+      {/* Letter i */}
       <motion.g
-        variants={{
-          idle: { scale: 1, opacity: 1 },
-          active: {
-            scale: [1, 1.15, 1],
-            opacity: [1, 0.8, 1],
-            transition: {
-              ...transition,
-              delay: 0.1,
-            },
-          },
+        animate={
+          isHovered
+            ? {
+                scale: [1, 1.05, 1],
+                opacity: [1, 0.9, 1],
+              }
+            : {
+                scale: 1,
+                opacity: 1,
+              }
+        }
+        transition={{
+          duration: 0.4,
+          ease: 'easeInOut',
+          delay: isHovered ? 0.2 : 0,
         }}
       >
         <g className="fill-slate-700 dark:fill-slate-100">
-          {/* Letter i */}
           <g transform="translate(400.804634, 135.357649)">
             <path
               style={{ stroke: 'none' }}
@@ -88,22 +159,26 @@ export function Logo({ className }: { className?: string }) {
         </g>
       </motion.g>
 
-      {/* Third part - "a." */}
+      {/* Second letter a */}
       <motion.g
-        variants={{
-          idle: { scale: 1, opacity: 1 },
-          active: {
-            scale: [1, 1.05, 1],
-            opacity: [1, 0.9, 1],
-            transition: {
-              ...transition,
-              delay: 0.2,
-            },
-          },
+        animate={
+          isHovered
+            ? {
+                scale: [1, 1.05, 1],
+                opacity: [1, 0.9, 1],
+              }
+            : {
+                scale: 1,
+                opacity: 1,
+              }
+        }
+        transition={{
+          duration: 0.4,
+          ease: 'easeInOut',
+          delay: isHovered ? 0.25 : 0,
         }}
       >
         <g className="fill-slate-700 dark:fill-slate-100">
-          {/* Letter a */}
           <g transform="translate(443.161822, 135.357649)">
             <path
               style={{ stroke: 'none' }}
@@ -111,7 +186,27 @@ export function Logo({ className }: { className?: string }) {
             />
           </g>
         </g>
-        {/* Dot */}
+      </motion.g>
+
+      {/* Dot with special animation */}
+      <motion.g
+        animate={
+          isHovered
+            ? {
+                scale: [1, 1.15, 1],
+                opacity: [1, 0.8, 1],
+              }
+            : {
+                scale: 1,
+                opacity: 1,
+              }
+        }
+        transition={{
+          duration: 0.4,
+          ease: 'easeInOut',
+          delay: isHovered ? 0.3 : 0,
+        }}
+      >
         <g className="fill-teal-600 dark:fill-teal-500">
           <g transform="translate(540.658726, 135.357649)">
             <path
