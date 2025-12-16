@@ -56,8 +56,7 @@ export interface FooterNavigation {
 
 // Footer props combining all options with variants
 export interface FooterProps
-  extends ComponentPropsWithoutRef<'footer'>,
-    VariantProps<typeof footerVariants> {
+  extends ComponentPropsWithoutRef<'footer'>, VariantProps<typeof footerVariants> {
   company?: FooterCompanyInfo;
   navigation?: FooterNavigation;
   newsletter?: FooterNewsletter;
@@ -80,8 +79,10 @@ export interface FooterSocialProps extends ComponentPropsWithoutRef<'div'> {
   className?: string;
 }
 
-export interface FooterNewsletterFormProps
-  extends Omit<ComponentPropsWithoutRef<'form'>, 'onSubmit'> {
+export interface FooterNewsletterFormProps extends Omit<
+  ComponentPropsWithoutRef<'form'>,
+  'onSubmit'
+> {
   placeholder?: string;
   buttonText?: string;
   onSubmit?: (email: string) => void | Promise<void>;
