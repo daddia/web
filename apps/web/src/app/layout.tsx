@@ -9,6 +9,7 @@ import { viewport, generateMetadata as generateMetadataHelper } from '@/lib/meta
 import { generateOrganizationSchema } from '@/lib/schema/organization';
 import { SITE_TITLE, BASE_URL, ORG_LOGO_URL, ORG_SOCIAL_PROFILES } from '@/lib/constants';
 import { GoogleTagManager } from '@next/third-parties/google';
+import { Analytics } from '@vercel/analytics/next';
 
 export { viewport };
 
@@ -50,6 +51,7 @@ export default async function RootLayout({
       <body className="flex flex-col min-h-screen">
         <main className="flex-1">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
