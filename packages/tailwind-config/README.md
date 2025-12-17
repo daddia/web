@@ -1,6 +1,6 @@
 # @repo/tailwind-config
 
-Shared Tailwind CSS v4 configuration with Lumitut Design Tokens for a kid-friendly reading app design system.
+Shared Tailwind CSS v4 configuration with d Design Tokens for a kid-friendly reading app design system.
 
 ## Features
 
@@ -72,10 +72,5 @@ tailwind-config/
 
 ## Dependencies
 
-- `@repo/lumitut-tokens`: Design tokens package
 - `tailwindcss`: v4.1+ required
 - `postcss`: CSS processing
-
-## License
-
-MIT

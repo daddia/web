@@ -22,7 +22,7 @@ const tokensCssPath = path.join(
   rootDir,
   'node_modules',
   '@repo',
-  'lumitut-tokens',
+  'tokens',
   'dist',
   'css',
   'tokens.css',

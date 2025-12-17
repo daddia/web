@@ -105,7 +105,7 @@ export default function Footer() {
           ))}
         </div>
         <p className="mt-10 text-center text-sm/6 text-white/70">
-          &copy; {new Date().getFullYear()} Lumitut. All rights reserved.
+          &copy; {new Date().getFullYear()} daddia. All rights reserved.
         </p>
       </div>
     </footer>
