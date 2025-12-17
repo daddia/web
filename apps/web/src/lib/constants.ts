@@ -1,6 +1,6 @@
 // Site metadata
 export const SITE_TITLE = 'daddia';
-export const SITE_DESCRIPTION = '';
+export const SITE_DESCRIPTION = 'Welcome to daddia';
 
 export const BASE_URL =
   process.env.NODE_ENV === 'production' ? 'https://daddia.com' : 'http://localhost:3000';
@@ -9,8 +9,8 @@ export const BASE_URL =
 export const DEFAULT_KEYWORDS = ['daddia'];
 
 // Social defaults
-export const DEFAULT_SOCIAL_IMAGE = '/default-og.jpg';
-export const DEFAULT_OG_IMAGE = '/images/hero_image.jpg';
+export const DEFAULT_SOCIAL_IMAGE = '/logo/logo.png';
+export const DEFAULT_OG_IMAGE = '/logo/logo.png';
 export const DEFAULT_OG_IMAGE_WIDTH = 1200;
 export const DEFAULT_OG_IMAGE_HEIGHT = 630;
 export const DEFAULT_OG_IMAGE_ALT = 'daddia';
@@ -32,7 +32,7 @@ export const ORG_LOGO_HEIGHT = 600;
 export const DEFAULT_ARTICLE_SECTION = 'Blog';
 export const DEFAULT_ARTICLE_WORD_COUNT = 2000;
 export const DEFAULT_ARTICLE_KEYWORDS = 'daddia';
-export const DEFAULT_ARTICLE_IMAGE = '/images/hero_image.jpg';
+export const DEFAULT_ARTICLE_IMAGE = '/logo/logo.png';
 export const DEFAULT_AUTHOR_NAME = 'daddia';
 export const DEFAULT_AUTHOR_URL_PATH = '';
 
